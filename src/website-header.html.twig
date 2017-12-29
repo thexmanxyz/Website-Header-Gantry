@@ -1,0 +1,106 @@
+{#######################################################}
+{#                                                     #}
+{#   Website Header - Particle for Gantry 5            #}
+{#                                                     #}
+{#   Purpose: This project allows to automatically     #}
+{#            generate a page header a/o description   #}
+{#            from Gantry and Joomla menu data.        #}
+{#                                                     #}
+{#   Author: Andreas Kar (thex) <andreas.kar@gmx.at>   #}
+{#                                                     #}
+{#######################################################}
+
+{% extends '@nucleus/partials/particle.html.twig' %}
+
+{% set cAttrs = '' %}
+{% if particle.tag.attributes %}
+    {% for attr in particle.tag.attributes %}
+        {% for key, value in attr %}
+            {% set cAttrs = cAttrs ~ ' ' ~ key|e ~ '="' ~ value|e('html_attr') ~ '"' %}
+        {% endfor %}
+    {% endfor %}
+{% endif %}
+
+{% if particle.css.class %}
+    {% set cClass = ' ' ~ particle.css.class %}
+{% else %}
+    {% set cClass = '' %}
+{% endif %}
+
+{% set hTitle = particle.atitle %}
+{% set fTitle = particle.ftitle %}
+{% set hDesc = particle.adescription %}
+{% set aItem = joomla.factory('application').getMenu().getActive() %}
+{% set menu = gantry.menu.instance(particle) %}
+
+{% if particle.ttag is empty %}
+    {% set toTag = '<h3' %}
+    {% set tcTag = '</h3>' %}
+{% else %}
+    {% set toTag = '<' ~ particle.ttag %}
+    {% set tcTag = '</' ~ particle.ttag ~ '>' %}
+{% endif %}
+{% if particle.css.tclass is not empty %}
+    {% set toTag = toTag ~ ' class="' ~ particle.css.tclass|e ~ '"' %}
+{% endif %}
+{% set toTag = toTag ~ '>' %}
+
+{% if particle.dtag is empty %}
+    {% set doTag = '<span>' %}
+    {% set dcTag = '</span>' %}
+{% else %}
+    {% set doTag = '<' ~ particle.dtag %}
+    {% set dcTag = '</' ~ particle.dtag ~ '>' %}
+{% endif %}
+{% if particle.css.dclass is not empty %}
+    {% set doTag = doTag ~ ' class="' ~ particle.css.dclass|e ~ '"' %}
+{% endif %}
+{% set doTag = doTag ~ '>' %}
+
+{% block particle %}
+    <div class="g-website-header{{cClass|e}}"{{cAttrs|raw}}>
+        {%- if particle.title or particle.icon or hTitle -%}
+            {{- toTag|raw -}}
+                {%- if particle.icon -%}
+                    <i class="{{ particle.icon|e }}"></i>
+                {%- endif -%}
+                {%- if hTitle != 'none' and aItem -%}
+                    {{- _self.renderOutput(menu, aItem, hTitle, fTitle, 1, 1) -}}
+                {%- elseif particle.title -%}
+                    {{- particle.title|e -}}
+                {%- endif -%}
+            {{- tcTag|raw -}}
+        {%- endif -%}
+        {%- if hDesc != 'none' and aItem -%}
+            {{- doTag|raw -}}{{- _self.renderOutput(menu, aItem, hDesc, fTitle, 0, 1) -}}{{- dcTag|raw -}}
+        {%- elseif particle.description -%}
+            {{- doTag|raw -}}{{ particle.description|e }}{{- dcTag|raw -}}
+        {%- endif -%}
+    </div>
+{% endblock %}
+{%- macro renderOutput(menu, aItem, iSel, fSel, isTitle, level) -%}
+    {%- import _self as SELF -%} 
+    {%- set output = '' -%}
+    {%- if iSel == 'subtitle' -%}
+        {%- if menu.items and menu.items|length > 0 -%}
+            {%- for item in menu.items -%}
+                {%- if item.id == aItem.id and item.subtitle -%}
+                    {%- set output = item.subtitle -%}
+                {%- endif -%}
+            {%- endfor -%}
+        {%- endif -%}
+    {%- elseif iSel == 'title' -%}
+        {%- if aItem.title -%}
+            {%- set output = aItem.title -%}
+        {%- endif -%}
+    {%- else -%}
+        {%- if aItem.params[iSel] -%}
+            {%- set output = aItem.params[iSel] -%}
+        {%- endif -%}
+    {%- endif -%}
+    {%- if output is empty and isTitle and fSel != 'none' and level == 1 -%}
+        {{- SELF.renderOutput(menu, aItem, fSel, fSel, isTitle, 2) -}}
+    {%- elseif output is not empty -%}
+        {{- output|e -}}
+    {%- endif -%}
+{%- endmacro -%}
