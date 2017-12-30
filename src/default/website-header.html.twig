@@ -49,7 +49,7 @@
 {% set toTag = toTag ~ '>' %}
 
 {% if particle.description.tag is empty %}
-    {% set doTag = '<span>' %}
+    {% set doTag = '<span' %}
     {% set dcTag = '</span>' %}
 {% else %}
     {% set doTag = '<' ~ particle.description.tag %}
@@ -75,7 +75,10 @@
             {{- tcTag|raw -}}
         {%- endif -%}
         {%- if aDesc != 'none' and aItem -%}
-            {{- doTag|raw -}}{{- _self.renderOutput(menu, aItem, mDesc, aDesc, fDesc, 1) -}}{{- dcTag|raw -}}
+            {%- set outDesc = _self.renderOutput(menu, aItem, mDesc, aDesc, fDesc, 1) -%}
+            {%- if outDesc -%}
+                {{- doTag|raw -}}{{- outDesc -}}{{- dcTag|raw -}}
+            {%- endif -%}
         {%- elseif mDesc -%}
             {{- doTag|raw -}}{{ mDesc|e }}{{- dcTag|raw -}}
         {%- endif -%}
