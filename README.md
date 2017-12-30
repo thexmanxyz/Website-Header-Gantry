@@ -7,20 +7,20 @@ This project contains a Gantry Particle that renders the current selected Joomla
 * Gantry Templating Framework and Theme
 
 ## Download
-Choose the correct download for your target platform. Joomla Plugin System supported for the Gantry themes - Helium and Hydrogen. The latest Particle version is **v1.0.2**.
+Choose the correct download for your target platform. Joomla Plugin System supported for the Gantry themes - Helium and Hydrogen. The latest Particle version is **v1.0.0**.
 
 ___
 **Default Particle:**
-[English](https://github.com/thexmanxyz/Website-Header-Gantry/releases/download/v1.0.2/wsh.particle.only.EN.v1.0.2.zip) / [German](https://github.com/thexmanxyz/Website-Header-Gantry/releases/download/v1.0.2/wsh.particle.only.DE.v1.0.2.zip)
+[English](https://github.com/thexmanxyz/Website-Header-Gantry/releases/download/v1.0.0/wsh.particle.only.EN.v1.0.0.zip) / [German](https://github.com/thexmanxyz/Website-Header-Gantry/releases/download/v1.0.0/wsh.particle.only.DE.v1.0.0.zip)
 
 **Legacy Particle - Gantry <5.3.2:**
-[English](https://github.com/thexmanxyz/Website-Header-Gantry/releases/download/v1.0.2/wsh.particle.only.legacy.EN.v1.0.2.zip) / [German](https://github.com/thexmanxyz/Website-Header-Gantry/releases/download/v1.0.2/wsh.particle.only.legacy.DE.v1.0.2.zip)
+[English](https://github.com/thexmanxyz/Website-Header-Gantry/releases/download/v1.0.0/wsh.particle.only.legacy.EN.v1.0.0.zip) / [German](https://github.com/thexmanxyz/Website-Header-Gantry/releases/download/v1.0.0/wsh.particle.only.legacy.DE.v1.0.0.zip)
 
 **Joomla Plugin - Hydrogen:**
-[English](https://github.com/thexmanxyz/Website-Header-Gantry/releases/download/v1.0.2/wsh.j3.hydrogen.EN.v1.0.2.zip) / [German](https://github.com/thexmanxyz/Website-Header-Gantry/releases/download/v1.0.2/wsh.j3.hydrogen.DE.v1.0.2.zip)
+[English](https://github.com/thexmanxyz/Website-Header-Gantry/releases/download/v1.0.0/wsh.j3.hydrogen.EN.v1.0.0.zip) / [German](https://github.com/thexmanxyz/Website-Header-Gantry/releases/download/v1.0.0/wsh.j3.hydrogen.DE.v1.0.0.zip)
 
 **Joomla Plugin - Helium:**
-[English](https://github.com/thexmanxyz/Website-Header-Gantry/releases/download/v1.0.2/wsh.j3.helium.EN.v1.0.2.zip) / [German](https://github.com/thexmanxyz/Website-Header-Gantry/releases/download/v1.0.2/wsh.j3.helium.DE.v1.0.2.zip)
+[English](https://github.com/thexmanxyz/Website-Header-Gantry/releases/download/v1.0.0/wsh.j3.helium.EN.v1.0.0.zip) / [German](https://github.com/thexmanxyz/Website-Header-Gantry/releases/download/v1.0.0/wsh.j3.helium.DE.v1.0.0.zip)
 ___
 
 ## Automatic Installation (Joomla only)
@@ -43,11 +43,42 @@ Please be aware of the template folder path if you install the particle manually
 2. Switch to **Layout** and add the new appearing Particle called **Website Header** either globally to your site (**base outline**), to a specific template or page by dragging it to the designated section.
 3. Configure the appearance according to your favor.
  
-## Supported API Parameters and Particle Options
-Comming Soon
+## Supported Parameters and Particle Options
+* Container Attributes
+* Custom CSS Classes
+  * for Container, Title and Description
+* Custom Icon or Title
+* Automatic Title and Description Selection from Joomla and Gantry
+  * Predefined Text
+  * Joomla Title
+  * Joomla Page Title
+  * Joomla Page Heading
+  * Joomla Meta Description
+  * Joomla Meta Keywords
+  * Gantry Subtitle
+* Fallback for Title and Description if prioritized selection is empty
+* Custom Tag Styling of Title and Description
 
 ## Showroom
-Comming Soon
+Insight of the *Website Header - Gantry Particle* configuration:
+
+**Backend (1)** - *[General](/screenshots/backend_general.png)*
+
+![1](/screenshots/backend_general.png)
+
+**Backend (2)** - *[Title](/screenshots/backend_title.png)*
+
+![2](/screenshots/backend_title.png)
+
+**Backend (3)** - *[Description](/screenshots/backend_description.png)*
+
+![3](/screenshots/backend_description.png)
+
+Example of the particle in action :
+
+**Frontend (1)** - *[Example](/screenshots/frontend_1.png)*
+
+![4](/screenshots/frontend_1.png)
 
 ## Future Tasks
 * more languages

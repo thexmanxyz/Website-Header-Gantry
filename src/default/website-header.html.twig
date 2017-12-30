@@ -1,6 +1,6 @@
 {#######################################################}
 {#                                                     #}
-{#   Website Header - Particle for Gantry 5            #}
+{#   Website Header - Particle for Gantry              #}
 {#                                                     #}
 {#   Purpose: This project allows to automatically     #}
 {#            generate a page header a/o description   #}
@@ -27,61 +27,64 @@
     {% set cClass = '' %}
 {% endif %}
 
-{% set hTitle = particle.atitle %}
-{% set fTitle = particle.ftitle %}
-{% set hDesc = particle.adescription %}
+{% set mTitle = particle.title.text %}
+{% set aTitle = particle.title.automatic %}
+{% set fTitle = particle.title.fallback %}
+{% set mDesc = particle.description.text %}
+{% set aDesc = particle.description.automatic %}
+{% set fDesc = particle.description.fallback %}
 {% set aItem = joomla.factory('application').getMenu().getActive() %}
 {% set menu = gantry.menu.instance(particle) %}
 
-{% if particle.ttag is empty %}
+{% if particle.title.tag is empty %}
     {% set toTag = '<h3' %}
     {% set tcTag = '</h3>' %}
 {% else %}
-    {% set toTag = '<' ~ particle.ttag %}
-    {% set tcTag = '</' ~ particle.ttag ~ '>' %}
+    {% set toTag = '<' ~ particle.title.tag %}
+    {% set tcTag = '</' ~ particle.title.tag ~ '>' %}
 {% endif %}
-{% if particle.css.tclass is not empty %}
-    {% set toTag = toTag ~ ' class="' ~ particle.css.tclass|e ~ '"' %}
+{% if particle.title.css.class is not empty %}
+    {% set toTag = toTag ~ ' class="' ~ particle.title.css.class|e ~ '"' %}
 {% endif %}
 {% set toTag = toTag ~ '>' %}
 
-{% if particle.dtag is empty %}
+{% if particle.description.tag is empty %}
     {% set doTag = '<span>' %}
     {% set dcTag = '</span>' %}
 {% else %}
-    {% set doTag = '<' ~ particle.dtag %}
-    {% set dcTag = '</' ~ particle.dtag ~ '>' %}
+    {% set doTag = '<' ~ particle.description.tag %}
+    {% set dcTag = '</' ~ particle.description.tag ~ '>' %}
 {% endif %}
-{% if particle.css.dclass is not empty %}
-    {% set doTag = doTag ~ ' class="' ~ particle.css.dclass|e ~ '"' %}
+{% if particle.description.css.class is not empty %}
+    {% set doTag = doTag ~ ' class="' ~ particle.description.css.class|e ~ '"' %}
 {% endif %}
 {% set doTag = doTag ~ '>' %}
 
 {% block particle %}
     <div class="g-website-header{{cClass|e}}"{{cAttrs|raw}}>
-        {%- if particle.title or particle.icon or hTitle -%}
+        {%- if mTitle or particle.title.icon or aTitle -%}
             {{- toTag|raw -}}
-                {%- if particle.icon -%}
-                    <i class="{{ particle.icon|e }}"></i>
+                {%- if particle.title.icon -%}
+                    <i class="{{ particle.title.icon|e }}"></i>
                 {%- endif -%}
-                {%- if hTitle != 'none' and aItem -%}
-                    {{- _self.renderOutput(menu, aItem, hTitle, fTitle, 1, 1) -}}
-                {%- elseif particle.title -%}
-                    {{- particle.title|e -}}
+                {%- if aTitle != 'none' and aItem -%}
+                    {{- _self.renderOutput(menu, aItem, mTitle, aTitle, fTitle, 1) -}}
+                {%- elseif mTitle -%}
+                    {{- mTitle|e -}}
                 {%- endif -%}
             {{- tcTag|raw -}}
         {%- endif -%}
-        {%- if hDesc != 'none' and aItem -%}
-            {{- doTag|raw -}}{{- _self.renderOutput(menu, aItem, hDesc, fTitle, 0, 1) -}}{{- dcTag|raw -}}
-        {%- elseif particle.description -%}
-            {{- doTag|raw -}}{{ particle.description|e }}{{- dcTag|raw -}}
+        {%- if aDesc != 'none' and aItem -%}
+            {{- doTag|raw -}}{{- _self.renderOutput(menu, aItem, mDesc, aDesc, fDesc, 1) -}}{{- dcTag|raw -}}
+        {%- elseif mDesc -%}
+            {{- doTag|raw -}}{{ mDesc|e }}{{- dcTag|raw -}}
         {%- endif -%}
     </div>
 {% endblock %}
-{%- macro renderOutput(menu, aItem, iSel, fSel, isTitle, level) -%}
+{%- macro renderOutput(menu, aItem, mText, aSel, fSel, level) -%}
     {%- import _self as SELF -%} 
     {%- set output = '' -%}
-    {%- if iSel == 'subtitle' -%}
+    {%- if aSel == 'subtitle' -%}
         {%- if menu.items and menu.items|length > 0 -%}
             {%- for item in menu.items -%}
                 {%- if item.id == aItem.id and item.subtitle -%}
@@ -89,17 +92,19 @@
                 {%- endif -%}
             {%- endfor -%}
         {%- endif -%}
-    {%- elseif iSel == 'title' -%}
+    {%- elseif aSel == 'title' -%}
         {%- if aItem.title -%}
             {%- set output = aItem.title -%}
         {%- endif -%}
+    {%- elseif aSel == 'manual' -%}
+        {%- set output = mText -%}
     {%- else -%}
-        {%- if aItem.params[iSel] -%}
-            {%- set output = aItem.params[iSel] -%}
+        {%- if aItem.params[aSel] -%}
+            {%- set output = aItem.params[aSel] -%}
         {%- endif -%}
     {%- endif -%}
-    {%- if output is empty and isTitle and fSel != 'none' and level == 1 -%}
-        {{- SELF.renderOutput(menu, aItem, fSel, fSel, isTitle, 2) -}}
+    {%- if output is empty and fSel != 'none' and level == 1 -%}
+        {{- SELF.renderOutput(menu, aItem, mText, fSel, fSel, 2) -}}
     {%- elseif output is not empty -%}
         {{- output|e -}}
     {%- endif -%}

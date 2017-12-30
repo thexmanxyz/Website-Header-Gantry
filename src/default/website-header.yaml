@@ -1,6 +1,6 @@
 #######################################################
 #                                                     #
-#   Website Header - Particle for Gantry 5            #
+#   Website Header - Particle for Gantry              #
 #                                                     #
 #   Purpose: This project allows to automatically     #
 #            generate a page header a/o description   #
@@ -26,28 +26,46 @@ form:
     tabs:
       type: container.tabs
       fields:
+        tab_general:
+            label: General
+            fields:
+                tag.attributes:
+                  type: collection.keyvalue
+                  label: Tag Attributes
+                  description: Additional attributes for the HTML container.
+                  key_placeholder: Key (e.g. style, name, ...)
+                  value_placeholder: Value
+                  exclude: ['id', 'class']
+
+                css.class:
+                  type: input.selectize
+                  label: Particle CSS
+                  description: CSS class name for the particle.
+                  default: 
+
         tab_title:
             label: Title
             fields:
-                icon:
+                title.icon:
                   type: input.icon
                   label: Icon
                   description: Select an icon for the title.
 
-                title:
+                title.text:
                   type: input.text
-                  label: Manual
+                  label: Text
                   description: Type in the title text.
                   placeholder: Enter title
 
-                atitle:
+                title.automatic:
                   type: select.select
                   label: Automatic
-                  description: Enables the automatic loading of a title title.
+                  description: Enables the automatic loading of a title.
                   placeholder: 'Select...'
                   default: none
                   options:
                       none: None
+                      manual: Title Text
                       title: Joomla Title
                       page_title: Joomla Page Title
                       page_heading: Joomla Page Heading
@@ -55,7 +73,7 @@ form:
                       menu-meta_keywords: Joomla Meta Keywords
                       subtitle: Gantry Subtitle
 
-                ftitle:
+                title.fallback:
                   type: select.select
                   label: Fallback
                   description: Fallback to an other property if automatic loaded title text is empty.
@@ -63,6 +81,7 @@ form:
                   default: none
                   options:
                       none: None
+                      manual: Title Text
                       title: Joomla Title
                       page_title: Joomla Page Title
                       page_heading: Joomla Page Heading
@@ -70,7 +89,7 @@ form:
                       menu-meta_keywords: Joomla Meta Keywords
                       subtitle: Gantry Subtitle
 
-                ttag:
+                title.tag:
                   type: select.select
                   label: Style Selector
                   description: HTML Tag in which the title text should be rendered.
@@ -86,21 +105,21 @@ form:
                       div: Div
                       span: Span
 
-                css.tclass:
+                title.css.class:
                   type: input.selectize
-                  label: Class
+                  label: CSS
                   description: CSS class name(s) for the title HTML tag.
 
         tab_description:
             label: Description
-            fields:          
-                description:
+            fields:
+                description.text:
                   type: textarea.textarea
-                  label: Manual
+                  label: Text
                   description: Type in the description text.
                   placeholder: Enter description
 
-                adescription:
+                description.automatic:
                   type: select.select
                   label: Automatic
                   description: Enables the automatic loading of a description text.
@@ -108,6 +127,7 @@ form:
                   default: none
                   options:
                       none: None
+                      manual: Description Text
                       title: Joomla Title
                       page_title: Joomla Page Title
                       page_heading: Joomla Page Heading
@@ -115,7 +135,23 @@ form:
                       menu-meta_keywords: Joomla Meta Keywords
                       subtitle: Gantry Subtitle
 
-                dtag:
+                description.fallback:
+                  type: select.select
+                  label: Fallback
+                  description: Fallback to an other property if automatic loaded description text is empty.
+                  placeholder: 'Select...'
+                  default: none
+                  options:
+                      none: None
+                      manual: Description Text
+                      title: Joomla Title
+                      page_title: Joomla Page Title
+                      page_heading: Joomla Page Heading
+                      menu-meta_description: Joomla Meta Description
+                      menu-meta_keywords: Joomla Meta Keywords
+                      subtitle: Gantry Subtitle
+
+                description.tag:
                   type: select.select
                   label: Style Selector
                   description: HTML Tag in which the description text should be rendered.
@@ -131,24 +167,7 @@ form:
                       div: Div
                       span: Span
 
-                css.dclass:
+                description.css.class:
                   type: input.selectize
-                  label: Class
+                  label: CSS
                   description: CSS class name(s) for the description HTML tag.
-
-        tab_particle:
-            label: Particle
-            fields:
-                css.class:
-                  type: input.selectize
-                  label: CSS Classes
-                  description: CSS class name for the particle.
-                  default: 
-
-                tag.attributes:
-                  type: collection.keyvalue
-                  label: Tag Attributes
-                  description: Additional attributes for the HTML container.
-                  key_placeholder: Key (data-*, style, ...)
-                  value_placeholder: Value
-                  exclude: ['id', 'class']

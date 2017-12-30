@@ -1,6 +1,6 @@
 #######################################################
 #                                                     #
-#   Website Header - Particle for Gantry 5            #
+#   Website Header - Particle for Gantry              #
 #                                                     #
 #   Purpose: This project allows to automatically     #
 #            generate a page header a/o description   #
@@ -23,132 +23,151 @@ form:
       description: Globally enable the Website Header particles.
       default: true
 
-    tabs:
-      type: container.tabs
+    set_general:
+      type: container.set
+      label: General
       fields:
-        tab_title:
-            label: Title
-            fields:
-                icon:
-                  type: input.icon
-                  label: Icon
-                  description: Select an icon for the title.
+        tag.attributes:
+          type: collection.keyvalue
+          label: Tag Attributes
+          description: Additional attributes for the HTML container.
+          key_placeholder: Key (e.g. style, name, ...)
+          value_placeholder: Value
+          exclude: ['id', 'class']
 
-                title:
-                  type: input.text
-                  label: Manual
-                  description: Type in the title text.
-                  placeholder: Enter title
+        css.class:
+          type: input.selectize
+          label: Particle CSS
+          description: CSS class name for the particle.
+          default:
 
-                atitle:
-                  type: select.select
-                  label: Automatic
-                  description: Enables the automatic loading of a title title.
-                  placeholder: 'Select...'
-                  default: none
-                  options:
-                      none: None
-                      title: Joomla Title
-                      page_title: Joomla Page Title
-                      page_heading: Joomla Page Heading
-                      menu-meta_description: Joomla Meta Description
-                      menu-meta_keywords: Joomla Meta Keywords
-                      subtitle: Gantry Subtitle
+    set_title:
+      type: container.set
+      label: Title
+      fields:
+        title.icon:
+          type: input.icon
+          label: Icon
+          description: Select an icon for the title.
 
-                ftitle:
-                  type: select.select
-                  label: Fallback
-                  description: Fallback to an other property if automatic loaded title text is empty.
-                  placeholder: 'Select...'
-                  default: none
-                  options:
-                      none: None
-                      title: Joomla Title
-                      page_title: Joomla Page Title
-                      page_heading: Joomla Page Heading
-                      menu-meta_description: Joomla Meta Description
-                      menu-meta_keywords: Joomla Meta Keywords
-                      subtitle: Gantry Subtitle
+        title.text:
+          type: input.text
+          label: Text
+          description: Type in the title text.
+          placeholder: Enter title
 
-                ttag:
-                  type: select.select
-                  label: Style Selector
-                  description: HTML Tag in which the title text should be rendered.
-                  placeholder: 'Select...'
-                  default: h3
-                  options:
-                      h1: Heading 1
-                      h2: Heading 2
-                      h3: Heading 3
-                      h4: Heading 4
-                      h5: Heading 5
-                      h6: Heading 6
-                      div: Div
-                      span: Span
+        title.automatic:
+          type: select.select
+          label: Automatic
+          description: Enables the automatic loading of a title.
+          placeholder: 'Select...'
+          default: none
+          options:
+              none: None
+              manual: Title Text
+              title: Joomla Title
+              page_title: Joomla Page Title
+              page_heading: Joomla Page Heading
+              menu-meta_description: Joomla Meta Description
+              menu-meta_keywords: Joomla Meta Keywords
+              subtitle: Gantry Subtitle
 
-                css.tclass:
-                  type: input.selectize
-                  label: Class
-                  description: CSS class name(s) for the title HTML tag.
+        title.fallback:
+          type: select.select
+          label: Fallback
+          description: Fallback to an other property if automatic loaded title text is empty.
+          placeholder: 'Select...'
+          default: none
+          options:
+              none: None
+              manual: Title Text
+              title: Joomla Title
+              page_title: Joomla Page Title
+              page_heading: Joomla Page Heading
+              menu-meta_description: Joomla Meta Description
+              menu-meta_keywords: Joomla Meta Keywords
+              subtitle: Gantry Subtitle
 
-        tab_description:
-            label: Description
-            fields:          
-                description:
-                  type: textarea.textarea
-                  label: Manual
-                  description: Type in the description text.
-                  placeholder: Enter description
+        title.tag:
+          type: select.select
+          label: Style Selector
+          description: HTML Tag in which the title text should be rendered.
+          placeholder: 'Select...'
+          default: h3
+          options:
+              h1: Heading 1
+              h2: Heading 2
+              h3: Heading 3
+              h4: Heading 4
+              h5: Heading 5
+              h6: Heading 6
+              div: Div
+              span: Span
 
-                adescription:
-                  type: select.select
-                  label: Automatic
-                  description: Enables the automatic loading of a description text.
-                  placeholder: 'Select...'
-                  default: none
-                  options:
-                      none: None
-                      title: Joomla Title
-                      page_title: Joomla Page Title
-                      page_heading: Joomla Page Heading
-                      menu-meta_description: Joomla Meta Description
-                      menu-meta_keywords: Joomla Meta Keywords
-                      subtitle: Gantry Subtitle
+        title.css.class:
+          type: input.selectize
+          label: CSS
+          description: CSS class name(s) for the title HTML tag.
 
-                dtag:
-                  type: select.select
-                  label: Style Selector
-                  description: HTML Tag in which the description text should be rendered.
-                  placeholder: 'Select...'
-                  default: span
-                  options:
-                      h1: Heading 1
-                      h2: Heading 2
-                      h3: Heading 3
-                      h4: Heading 4
-                      h5: Heading 5
-                      h6: Heading 6
-                      div: Div
-                      span: Span
+    set_description:
+      type: container.set
+      label: Description
+      fields:
+        description.text:
+          type: textarea.textarea
+          label: Text
+          description: Type in the description text.
+          placeholder: Enter description
 
-                css.dclass:
-                  type: input.selectize
-                  label: Class
-                  description: CSS class name(s) for the description HTML tag.
+        description.automatic:
+          type: select.select
+          label: Automatic
+          description: Enables the automatic loading of a description text.
+          placeholder: 'Select...'
+          default: none
+          options:
+              none: None
+              manual: Description Text
+              title: Joomla Title
+              page_title: Joomla Page Title
+              page_heading: Joomla Page Heading
+              menu-meta_description: Joomla Meta Description
+              menu-meta_keywords: Joomla Meta Keywords
+              subtitle: Gantry Subtitle
 
-        tab_particle:
-            label: Particle
-            fields:
-                css.class:
-                  type: input.selectize
-                  label: CSS Classes
-                  description: CSS class name for the particle.
-                  default: 
+        description.fallback:
+          type: select.select
+          label: Fallback
+          description: Fallback to an other property if automatic loaded description text is empty.
+          placeholder: 'Select...'
+          default: none
+          options:
+              none: None
+              manual: Description Text
+              title: Joomla Title
+              page_title: Joomla Page Title
+              page_heading: Joomla Page Heading
+              menu-meta_description: Joomla Meta Description
+              menu-meta_keywords: Joomla Meta Keywords
+              subtitle: Gantry Subtitle
 
-                tag.attributes:
-                  type: collection.keyvalue
-                  label: Tag Attributes
-                  description: Additional attributes for the HTML container.
-                  key_placeholder: Key (data-*, style, ...)
-                  value_placeholder: Value
-                  exclude: ['id', 'class']
+        description.tag:
+          type: select.select
+          label: Style Selector
+          description: HTML Tag in which the description text should be rendered.
+          placeholder: 'Select...'
+          default: span
+          options:
+              h1: Heading 1
+              h2: Heading 2
+              h3: Heading 3
+              h4: Heading 4
+              h5: Heading 5
+              h6: Heading 6
+              div: Div
+              span: Span
+
+        description.css.class:
+          type: input.selectize
+          label: CSS
+          description: CSS class name(s) for the description HTML tag.
