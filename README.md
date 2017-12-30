@@ -74,6 +74,12 @@ Insight of the *Website Header - Gantry Particle* configuration:
 
 ![3](/screenshots/backend_description.png)
 
+Example of the particle in action :
+
+**Frontend (1)** - *[Example](/screenshots/frontend_1.png)*
+
+![4](/screenshots/frontend_1.png)
+
 ## Future Tasks
 * more languages
 
