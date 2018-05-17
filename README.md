@@ -1,5 +1,5 @@
 # Website Header - Particle for Gantry
-This project contains a Gantry Particle that renders the current selected Joomla Menu data on a page within the Gantry templating framework. **Website Header** encapsulates the parameterization of dynamically generated header data in dependence of the selected menu item within a Gantry Particle. Furthermore, it provides an easy, user friendly and GUI assisted configuration and integration. In the current revision the following CMS systems are supported:
+This project contains a Gantry Particle that renders the current selected Joomla Menu data on a page within the Gantry templating framework. **Website Header** encapsulates the parameterization of dynamically generated header data in dependence of the selected menu item within a Gantry Particle. Furthermore, it provides an easy, user friendly and GUI assisted configuration and integration. In the current revision the following CMS is supported:
 * Joomla
 
 ## Prerequisites
