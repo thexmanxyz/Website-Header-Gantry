@@ -43,6 +43,41 @@ form:
                   description: CSS Klassen für die individuelle Gestaltung des Particles.
                   default:
 
+                container.backgrounds:
+                  type: collection.list
+                  array: true
+                  label: Hintergrund
+                  description: Erstellen Sie ein Element, um den Container mit einem benutzerdefinierten Hintergrund zu stylen. Bei mehreren Hintergründen erfolgt die Auswahl zufällig.
+                  value: title
+                  ajax: true
+                  fields:
+                    .name:
+                      type: input.text
+                      description: Der Name der dem Hintergrund zugeordnet wurde.
+                      label: Name
+
+                    .css.class:
+                      type: input.selectize
+                      description: Eine CSS Klasse die das Styling des Hingergrundes übernimmt.
+                      label: CSS Klasse
+                      default: 
+
+                    .image:
+                      type: input.imagepicker
+                      description: Der Pfad zum Hintergrundbild.
+                      label: Bild
+
+                    .repeat:
+                      type: select.select
+                      label: Repeat
+                      description: Das Kachelverhalten für den Hintergrund auf unterschiedlichen Achsen.
+                      default: repeat
+                      options:
+                        repeat: Repeat
+                        repeat-x: Repeat X-Axis
+                        repeat-y: Repeat Y-Axis
+                        no-repeat: No Repeat
+
         tab_title:
             label: Titel
             fields:

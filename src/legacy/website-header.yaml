@@ -41,6 +41,41 @@ form:
           description: CSS class name for the particle.
           default:
 
+        container.backgrounds:
+          type: collection.list
+          array: true
+          label: Backgrounds
+          description: Create an item to style the container with a custom backgrounds. In case of multiple images, a random selection will be executed.
+          value: title
+          ajax: true
+          fields:
+            .name:
+              type: input.text
+              description: The name assigned to the background image.
+              label: Name
+
+            .css.class:
+              type: input.selectize
+              description: The css class that contains the background styling.
+              label: CSS Class
+              default: 
+
+            .image:
+              type: input.imagepicker
+              description: The image path for the background image.
+              label: Image
+
+            .repeat:
+              type: select.select
+              label: Repeat
+              description: The repeat behaviour of the background in different axis.
+              default: repeat
+              options:
+                repeat: Repeat
+                repeat-x: Repeat X-Axis
+                repeat-y: Repeat Y-Axis
+                no-repeat: No Repeat
+
     set_title:
       type: container.set
       label: Title

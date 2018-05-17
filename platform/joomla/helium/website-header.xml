@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <extension type="file" method="upgrade" version="3.0">
     <name>Website Header - Gantry Particle (Helium)</name>
-    <version>1.0.1</version>
-    <creationDate>30.12.2017</creationDate>
+    <version>1.1.0</version>
+    <creationDate>18.05.2018</creationDate>
     <author>Andreas Kar</author>
     <authorEmail>andreas.kar@gmx.at</authorEmail>
 	<authorUrl></authorUrl>
-    <copyright>© 2017 Andreas Kar</copyright>
+    <copyright>© 2018 Andreas Kar</copyright>
     <license>MIT - see LICENSE.pdf</license>
     <description>
         <![CDATA[<div class="alert alert-info" role="alert"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>

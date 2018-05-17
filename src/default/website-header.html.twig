@@ -60,8 +60,20 @@
 {% endif %}
 {% set doTag = doTag ~ '>' %}
 
+{% set bgImgs = particle.container.backgrounds %}
+{% set bgImgCtn = bgImgs|length %}
+{% if bgImgCtn > 0 %}
+    {% set bgImg = bgImgs[random(bgImgCtn - 1)] %}
+    {% if url(bgImg.image) is not empty %}
+        {% set bgAttrs = ' style="background-image: url(' ~ url(bgImg.image) ~ '); background-repeat: ' ~ bgImg.repeat ~ ';"' %}
+    {% endif %}
+    {% if bgImg.css.class is not empty %}
+        {% set bgClass = ' ' ~  bgImg.css.class %}
+    {% endif %}
+{% endif %}
+
 {% block particle %}
-    <div class="g-website-header{{cClass|e}}"{{cAttrs|raw}}>
+    <div class="g-website-header{{cClass|e}}{{bgClass|e}}"{{cAttrs|raw}}{{bgAttrs|raw}}>
         {%- if mTitle or particle.title.icon or aTitle -%}
             {{- toTag|raw -}}
                 {%- if particle.title.icon -%}

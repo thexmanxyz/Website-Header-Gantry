@@ -20,7 +20,7 @@ set langs_upper=EN, DE
 set default_lang=EN
 
 set prj_id=wsh
-set prj_rev=v1.0.1
+set prj_rev=v1.1.0
 set prj_name=website-header
 set prj_fullname=Website Header - Particle
 
