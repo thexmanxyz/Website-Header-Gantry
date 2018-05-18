@@ -47,6 +47,8 @@ Please be aware of the template folder path if you install the particle manually
 * Container Attributes
 * Custom CSS Classes
   * for Container, Title and Description
+* Background Styling - Multi Image Support
+  * Randomization of Backgrounds on Multi
 * Custom Icon or Title
 * Automatic Title and Description Selection from Joomla and Gantry
   * Predefined Text
