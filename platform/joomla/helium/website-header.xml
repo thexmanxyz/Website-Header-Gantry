@@ -5,19 +5,19 @@
     <creationDate>18.05.2018</creationDate>
     <author>Andreas Kar</author>
     <authorEmail>andreas.kar@gmx.at</authorEmail>
-	<authorUrl></authorUrl>
+    <authorUrl></authorUrl>
     <copyright>© 2018 Andreas Kar</copyright>
     <license>MIT - see LICENSE.pdf</license>
     <description>
         <![CDATA[<div class="alert alert-info" role="alert"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-		<h3>Website Header - Particle for Gantry Framework</h3>
-		<span aria-hidden="true" class="icon-user"></span>&nbsp;<em>Andreas Kar (andreas.kar@gmx.at)</em>
-		<p><b>NOTE</b>:&nbsp;This particle is installed for the Gantry Helium.<br />If you want to install the particle on a different Gantry template, you must manually copy the two files <code>website-header.yaml</code> and <code>website-header.html.twig</code> to <code>/templates/[TEMPLATE]/custom/particles</code>.</p></div>]]>
+        <h3>Website Header - Particle for Gantry Framework</h3>
+        <span aria-hidden="true" class="icon-user"></span>&nbsp;<em>Andreas Kar (andreas.kar@gmx.at)</em>
+        <p><b>NOTE</b>:&nbsp;This particle is installed for the Gantry Helium.<br />If you want to install the particle on a different Gantry template, you must manually copy the two files <code>website-header.yaml</code> and <code>website-header.html.twig</code> to <code>/templates/[TEMPLATE]/custom/particles</code>.</p></div>]]>
     </description>
     <fileset>
         <files folder="particles" target="templates/g5_helium/custom/particles">
-			<filename>website-header.html.twig</filename>
-			<filename>website-header.yaml</filename>
-		</files>
+            <filename>website-header.html.twig</filename>
+            <filename>website-header.yaml</filename>
+        </files>
     </fileset>
 </extension>
