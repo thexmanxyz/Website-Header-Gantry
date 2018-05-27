@@ -40,8 +40,8 @@
     {% set toTag = '<h3' %}
     {% set tcTag = '</h3>' %}
 {% else %}
-    {% set toTag = '<' ~ particle.title.tag %}
-    {% set tcTag = '</' ~ particle.title.tag ~ '>' %}
+    {% set toTag = '<' ~ particle.title.tag|e %}
+    {% set tcTag = '</' ~ particle.title.tag|e ~ '>' %}
 {% endif %}
 {% if particle.title.css.class is not empty %}
     {% set toTag = toTag ~ ' class="' ~ particle.title.css.class|e ~ '"' %}
@@ -52,8 +52,8 @@
     {% set doTag = '<span' %}
     {% set dcTag = '</span>' %}
 {% else %}
-    {% set doTag = '<' ~ particle.description.tag %}
-    {% set dcTag = '</' ~ particle.description.tag ~ '>' %}
+    {% set doTag = '<' ~ particle.description.tag|e %}
+    {% set dcTag = '</' ~ particle.description.tag|e ~ '>' %}
 {% endif %}
 {% if particle.description.css.class is not empty %}
     {% set doTag = doTag ~ ' class="' ~ particle.description.css.class|e ~ '"' %}
