@@ -7,20 +7,23 @@ This project contains a Gantry Particle that renders the current selected Joomla
 * Gantry Templating Framework and Theme
 
 ## Download
-Choose the correct download for your target platform. Joomla Plugin System supported for the Gantry themes - Helium and Hydrogen. The latest Particle version is **v1.1.0**.
+Choose the correct download for your target platform. Joomla Plugin System supported for the Gantry themes - Helium and Hydrogen. The latest Particle version is **v1.1.1**.
 
 ___
 **Default Particle:**
-[English](https://github.com/thexmanxyz/Website-Header-Gantry/releases/download/v1.1.0/wsh.particle.only.EN.v1.1.0.zip) / [German](https://github.com/thexmanxyz/Website-Header-Gantry/releases/download/v1.1.0/wsh.particle.only.DE.v1.1.0.zip)
+[English](https://github.com/thexmanxyz/Website-Header-Gantry/releases/download/v1.1.1/wsh.particle.only.EN.v1.1.1.zip) / [German](https://github.com/thexmanxyz/Website-Header-Gantry/releases/download/v1.1.1/wsh.particle.only.DE.v1.1.1.zip)
 
 **Legacy Particle - Gantry <5.3.2:**
-[English](https://github.com/thexmanxyz/Website-Header-Gantry/releases/download/v1.1.0/wsh.particle.only.legacy.EN.v1.1.0.zip) / [German](https://github.com/thexmanxyz/Website-Header-Gantry/releases/download/v1.1.0/wsh.particle.only.legacy.DE.v1.1.0.zip)
+[English](https://github.com/thexmanxyz/Website-Header-Gantry/releases/download/v1.1.1/wsh.particle.only.legacy.EN.v1.1.1.zip) / [German](https://github.com/thexmanxyz/Website-Header-Gantry/releases/download/v1.1.1/wsh.particle.only.legacy.DE.v1.1.1.zip)
+
+**Joomla Plugin - Gantry Global:**
+[English](https://github.com/thexmanxyz/Website-Header-Gantry/releases/download/v1.1.1/wsh.j3.global.EN.v1.1.1.zip) / [German](https://github.com/thexmanxyz/Website-Header-Gantry/releases/download/v1.1.1/wsh.j3.global.DE.v1.1.1.zip)
 
 **Joomla Plugin - Hydrogen:**
-[English](https://github.com/thexmanxyz/Website-Header-Gantry/releases/download/v1.1.0/wsh.j3.hydrogen.EN.v1.1.0.zip) / [German](https://github.com/thexmanxyz/Website-Header-Gantry/releases/download/v1.1.0/wsh.j3.hydrogen.DE.v1.1.0.zip)
+[English](https://github.com/thexmanxyz/Website-Header-Gantry/releases/download/v1.1.1/wsh.j3.hydrogen.EN.v1.1.1.zip) / [German](https://github.com/thexmanxyz/Website-Header-Gantry/releases/download/v1.1.1/wsh.j3.hydrogen.DE.v1.1.1.zip)
 
 **Joomla Plugin - Helium:**
-[English](https://github.com/thexmanxyz/Website-Header-Gantry/releases/download/v1.1.0/wsh.j3.helium.EN.v1.1.0.zip) / [German](https://github.com/thexmanxyz/Website-Header-Gantry/releases/download/v1.1.0/wsh.j3.helium.DE.v1.1.0.zip)
+[English](https://github.com/thexmanxyz/Website-Header-Gantry/releases/download/v1.1.1/wsh.j3.helium.EN.v1.1.1.zip) / [German](https://github.com/thexmanxyz/Website-Header-Gantry/releases/download/v1.1.1/wsh.j3.helium.DE.v1.1.1.zip)
 ___
 
 ## Automatic Installation (Joomla only)

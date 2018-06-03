@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <extension type="file" method="upgrade" version="3.0">
     <name>Website Header - Gantry Particle (Helium)</name>
-    <version>1.1.0</version>
-    <creationDate>18.05.2018</creationDate>
+    <version>1.1.1</version>
+    <creationDate>03.06.2018</creationDate>
     <author>Andreas Kar</author>
     <authorEmail>andreas.kar@gmx.at</authorEmail>
     <authorUrl></authorUrl>
@@ -12,7 +12,8 @@
         <![CDATA[<div class="alert alert-info" role="alert"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
         <h3>Website Header - Particle for Gantry Framework</h3>
         <span aria-hidden="true" class="icon-user"></span>&nbsp;<em>Andreas Kar (andreas.kar@gmx.at)</em>
-        <p><b>INFO</b>:&nbsp;Dieses Particle wurde für Gantry Helium installiert.<br />Wenn Sie das Particle für ein anderes Gantry Template installieren möchten, so müssen Sie die zwei folgenden Dateien <code>website-header.yaml</code> und <code>website-header.html.twig</code> in den Ordner <code>/templates/[TEMPLATE]/custom/particles</code> kopieren.</p></div>]]>
+        <p><b>INFO</b>:&nbsp;Dieses Particle wurde für Gantry Helium installiert.<br />Wenn Sie das Particle für ein anderes Gantry Template installieren möchten, dann müssen die Dateien wie folgt platziert werden:</p>
+		<ul><li><code>*.yaml</code> =&gt; <code>/templates/[TEMPLATE]/custom/particles</code></li><li><code>*.twig</code> =&gt; <code>/templates/[TEMPLATE]/custom/particles</code></li></ul></div>]]>
     </description>
     <fileset>
         <files folder="particles" target="templates/g5_helium/custom/particles">
