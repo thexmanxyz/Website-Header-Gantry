@@ -16,7 +16,7 @@ ___
 **Legacy Particle - Gantry <5.3.2:**
 [English](https://github.com/thexmanxyz/Website-Header-Gantry/releases/download/v1.1.1/wsh.particle.only.legacy.EN.v1.1.1.zip) / [German](https://github.com/thexmanxyz/Website-Header-Gantry/releases/download/v1.1.1/wsh.particle.only.legacy.DE.v1.1.1.zip)
 
-**Joomla Plugin - Gantry Global:**
+**Joomla Plugin - All Templates (Global):**
 [English](https://github.com/thexmanxyz/Website-Header-Gantry/releases/download/v1.1.1/wsh.j3.global.EN.v1.1.1.zip) / [German](https://github.com/thexmanxyz/Website-Header-Gantry/releases/download/v1.1.1/wsh.j3.global.DE.v1.1.1.zip)
 
 **Joomla Plugin - Hydrogen:**
