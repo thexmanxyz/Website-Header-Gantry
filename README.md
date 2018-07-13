@@ -96,7 +96,7 @@ None
 [Gantry Framework](http://gantry.org/)
 
 ## Credits
-Thanks to the Gantry team for providing a modern templating framework.
+Thanks to the [Gantry](https://github.com/gantry) team for providing a modern templating framework.
 
 Thanks to [yellowwebmonkey](https://github.com/yellowwebmonkey) for the inspiration and testing.
 
