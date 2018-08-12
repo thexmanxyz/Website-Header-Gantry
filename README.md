@@ -7,7 +7,7 @@ This project contains a Gantry Particle that renders the current selected Joomla
 * Gantry Templating Framework and Theme
 
 ## Download
-Choose the correct download for your target platform. Joomla Plugin System supported for the Gantry themes - Helium and Hydrogen. The latest Particle version is **v1.1.1**.
+Choose the correct download for your target platform. Joomla Plugin System supported for all Gantry themes globally and locally for Helium or Hydrogen. The latest Particle version is **v1.1.1**.
 
 ___
 **Default Particle:**
@@ -27,7 +27,7 @@ ___
 ___
 
 ## Automatic Installation (Joomla only)
-1. Download the Plugin of the *Website Header Particle* for **Hydrogen or Helium**.
+1. Download the Plugin of the *Website Header Particle* for **Hydrogen, Helium or Global** installation.
 2. Install it over the Joomla Plugin System.
 
 ## Manual Installation
