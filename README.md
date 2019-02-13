@@ -7,7 +7,7 @@ This project contains a Gantry Particle that renders the current selected Joomla
 * Gantry Templating Framework and Theme
 
 ## Download
-Choose the correct download for your target platform. Joomla Plugin System supported for all Gantry themes globally and locally for Helium or Hydrogen. The latest Particle version is **v1.1.1**.
+Choose the correct download for your target platform. The Joomla Plugin System is supported for all Gantry themes globally or locally for the templates Helium and Hydrogen. The latest Particle version is **v1.1.1**.
 
 ___
 **Default Particle:**
@@ -33,7 +33,7 @@ ___
 ## Manual Installation
 1. Download the **Default or Legacy Package** of the *Website Header Particle*. If you are using Gantry **<5.3.2** please use the **Legacy Package** for compatibility reasons.
 2. Extract the files.
-3. Copy the `.html.twig` and the `.yaml` file to your particle folder `/[GANTRY_THEME]/custom/particles`. Please check the list below to determine where the template folder for your CMS is located.
+3. Copy the `.html.twig` and the `.yaml` file to your particle folder `/[GANTRY_THEME]/custom/particles`. Please check the [listing](https://github.com/thexmanxyz/Website-Header-Gantry#cms-template-folder) below to determine where the template folder for your CMS is located.
 
 ## CMS Template Folder
 Please be aware of the template folder path if you install the particle manually:
@@ -86,7 +86,7 @@ Example of the particle in action :
 ![4](/screenshots/frontend_1.png)
 
 ## Future Tasks
-* more languages
+- [ ] add more languages
 
 ## Known Issues
 None
