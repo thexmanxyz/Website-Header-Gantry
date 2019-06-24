@@ -47,22 +47,22 @@ Please be aware of the template folder path if you install the particle manually
 3. Configure the appearance according to your favor.
  
 ## Supported Parameters and Particle Options
-* Container Attributes
-* Custom CSS Classes
-  * for Container, Title and Description
-* Background Styling - Multi Image Support
-  * Randomization of Backgrounds on Multi
-* Custom Icon or Title
-* Automatic Title and Description Selection from Joomla and Gantry
-  * Predefined Text
-  * Joomla Title
-  * Joomla Page Title
-  * Joomla Page Heading
-  * Joomla Meta Description
-  * Joomla Meta Keywords
-  * Gantry Subtitle
-* Fallback for Title and Description if prioritized selection is empty
-* Custom Tag Styling of Title and Description
+* Container attributes
+* Custom CSS classes
+  * For container, title and description
+* Background styling - multiple images support
+  * Randomization of backgrounds (if multiple)
+* Custom icon or title
+* Automatic title and description selection from Joomla and Gantry
+  * Predefined text
+  * Joomla title
+  * Joomla page title
+  * Joomla page heading
+  * Joomla meta description
+  * Joomla meta keywords
+  * Gantry subtitle
+* Fallback for title and description if prioritized selection is empty
+* Custom tag styling of title and description
 
 ## Showroom
 Insight of the *Website Header - Gantry Particle* configuration:
