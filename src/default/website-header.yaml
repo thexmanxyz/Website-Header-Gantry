@@ -22,7 +22,7 @@ form:
     enabled:
       type: input.checkbox
       label: Enabled
-      description: Globally enable the Website Header particles.
+      description: Globally enable the Website Header Particle.
       default: true
 
     tabs:
