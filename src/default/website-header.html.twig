@@ -62,7 +62,14 @@
 {% endif %}
 {% set doTag = doTag ~ '>' %}
 
-{% set bgImgs = particle.container.backgrounds %}
+{% set bgImgsTemp = particle.container.backgrounds %}
+{% set bgImgs = [] %}
+{% for bg in bgImgsTemp %}
+  {% if bg.enabled|default(true) %}
+    {% set bgImgs = bgImgs|merge([bg]) %}
+  {% endif %}
+{% endfor %}
+
 {% set bgImgCtn = bgImgs|length %}
 {% if bgImgCtn > 0 %}
     {% set bgImg = bgImgs[random(bgImgCtn - 1)] %}

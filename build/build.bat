@@ -19,7 +19,7 @@ set scr_log_files=0
 
 REM --- project variables ---
 set prj_id=wsh
-set prj_rev=v1.1.1
+set prj_rev=v1.1.2
 set prj_name=website-header
 set prj_fullname=Website Header - Particle
 set prj_title_hr=-----------------------------
