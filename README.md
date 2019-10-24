@@ -105,4 +105,4 @@ Thanks to the [Gantry](https://github.com/gantry) team for providing a modern te
 Thanks to [yellowwebmonkey](https://github.com/yellowwebmonkey) for the inspiration and testing.
 
 ## by [thex](https://github.com/thexmanxyz) | [gantryprojects](https://gantryprojects.com)
-Copyright (c) 2019, free to use in personal and commercial software as per the [license](/LICENSE.md).
+Copyright (c) 2019, free to use in personal and commercial software as per the [license](/LICENSE).
